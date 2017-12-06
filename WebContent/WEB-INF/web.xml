@@ -9,4 +9,36 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value></param-value>
+  </context-param>
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <filter>
+  	<!-- struts2入口 -->
+	<filter-name>struts</filter-name>
+	<filter-class>
+		org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter
+	</filter-class>
+	
+	<!-- 设置struts.xml的位置  -->
+	<!-- <init-param>  //这里采用默认位置故注释掉
+        <param-name>filterConfig</param-name>  
+        <param-value>/WEB-INF/struts.xml</param-value>  
+    </init-param>   -->
+    
+    <!-- 设置后缀名为 .action -->
+	<init-param>
+		<param-name>struts.action.extension</param-name>
+		<param-value>action</param-value>
+	</init-param>
+  </filter>
+  
+  <!-- 过滤所有的请求  -->
+  <filter-mapping>
+	<filter-name>struts</filter-name>
+	<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>
