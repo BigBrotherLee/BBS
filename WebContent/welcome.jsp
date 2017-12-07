@@ -8,6 +8,6 @@
 </head>
 <body>
 	it is working!!<br>
-	welcome you +${requestScope.name}
+	welcome you ${requestScope.name}
 </body>
 </html>
