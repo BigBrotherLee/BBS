@@ -7,7 +7,7 @@
 <title>login</title>
 </head>
 <body>
-	<s:form action="loginAction" method="get">
+	<s:form action="loginAction">
 		<s:textfield name="name"/>
 		<s:submit/>
 	</s:form>
