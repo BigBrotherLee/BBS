@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- action -->
+	<bean id="loginAction" class="indi.bigbrotherlee.bbs.web.LoginAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	
+	<!-- service -->
+	<bean id="userService" class="indi.bigbrotherlee.bbs.service.UserService">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	
+	<!-- DAO -->
+	<bean id="userDao" class="indi.bigbrotherlee.bbs.dao.UserDaoImpl">
+		<property name="hTemplate" ref="hTemplate"></property>
+	</bean>
+	
+	<!-- 连接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/bbs?useSSL=true"></property>
+		<property name="user"  value="root"></property>
+		<property name="password"  value="1997126"></property>
+	</bean>
+	
+	<!-- hibernate -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocations" value="/WEB-INF/hibernate.cfg.xml"></property>
+	</bean>
+	<bean id="hTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>
+

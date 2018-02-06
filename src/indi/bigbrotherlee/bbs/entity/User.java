@@ -1,10 +1,10 @@
-package indi.bigbrotherlee.bbs.orm;
+package indi.bigbrotherlee.bbs.entity;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name="user")
-public class user {
+public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;

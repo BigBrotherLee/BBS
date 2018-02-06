@@ -7,9 +7,10 @@
 <title>login</title>
 </head>
 <body>
-	<s:form action="loginAction">
-		<s:textfield name="name"/>
-		<s:submit/>
-	</s:form>
+	<form action="BBS/loginAction">
+		<input type="text" name="name"/><br />
+		<input type="password" name="password"/><br/>
+		<input type="submit" value="go"/>
+	</form>
 </body>
 </html>
