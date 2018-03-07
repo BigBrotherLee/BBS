@@ -12,23 +12,31 @@ public class UserDaoImpl implements UserDao {
 		this.hTemplate = hTemplate;
 	}
 	@Override
-	public void addUser() {
+	public void addUser(User user) {
+		hTemplate.save(user);
+		hTemplate.flush();
 		
 	}
 	@Override
-	public List<User> getUsers() {
-		// TODO Auto-generated method stub
-		return null;
+	public User getUser(User user) {
+		try{
+			return hTemplate.findByExample(user).get(0);
+		}catch(Exception e) {
+			return null;
+		}
 	}
 	@Override
-	public void deleteUser() {
-		// TODO Auto-generated method stub
-		
+	public void deleteUser(User user) {
+		hTemplate.delete(user);
 	}
 	@Override
-	public void updateUser() {
-		// TODO Auto-generated method stub
-		
+	public void updateUser(User user) {
+		hTemplate.update(user);
+		hTemplate.flush();
+	}
+	@Override
+	public List<User> getUsers(String key) {
+		return (List<User>) hTemplate.find("from indi.bigbrotherlee.entity.User u where u.name like %?%",key);
 	}
 
 }

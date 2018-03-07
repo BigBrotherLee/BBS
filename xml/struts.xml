@@ -4,9 +4,10 @@
 	"http://struts.apache.org/dtds/struts-2.5.dtd">
 <struts>
 	<package name="main" extends="struts-default" namespace="/">
-		<action name="loginAction" class="loginAction">
+		<action name="loginAction" class="loginAction" method="login">
 			<result name="success">/welcome.jsp</result>
 			<result name="not-defined">/404.html</result>
+			<result name="not_find">/404.html</result>
 		</action>
 	</package>
 </struts>

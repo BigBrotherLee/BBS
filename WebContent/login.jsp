@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="BBS/loginAction">
-		<input type="text" name="name"/><br />
+		<input type="text" name="id"/><br />
 		<input type="password" name="password"/><br/>
 		<input type="submit" value="go"/>
 	</form>
