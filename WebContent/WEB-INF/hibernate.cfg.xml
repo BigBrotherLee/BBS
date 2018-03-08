@@ -4,15 +4,19 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
+		<!-- 注释部分为数据库连接信息，现在已经配置到了Spring配置文件中（c3p0连接池部分） -->
 		<!-- <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="connection.url">jdbc:mysql://127.0.0.1:3306/bbs?useSSL=true</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">1997126</property> -->
-		<!-- <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dislect</property> -->
+		<!-- <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dislect</property> 设置方言-->
+		
+		<!-- 以下配置的意思为：当hibernate框架时是否向控制台打印SQL语句，表创建模式为更新,会话上 -->
 		<property name="show_sql">true</property>
 		<property name="hbm2ddl.auto">update</property>
 		<!-- <property name="current_session_context_class">thread</property> -->
 		<property name="current_session_context_class">org.springframework.orm.hibernate5.SpringSessionContext</property>
+		<!-- 注册User类为一个表 -->
 		<mapping class="indi.bigbrotherlee.bbs.entity.User"/>
 	</session-factory>
 </hibernate-configuration>

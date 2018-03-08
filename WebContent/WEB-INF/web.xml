@@ -1,18 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
 	<display-name>BBS</display-name>
+	
+	<!-- 注册spring的监听器，让spring托管 -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	<!-- spring配置文件的位置 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/application.xml</param-value>
 	</context-param>
 	<filter>
-		<!-- struts2入口 -->
+		<!-- 注册Struts2的过滤器,struts2入口-->
 		<filter-name>struts</filter-name>
 		<filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
 		<!-- 设置后缀名为 .action -->
@@ -20,7 +23,7 @@
 			</init-param> -->
 	</filter>
 
-	<!-- 过滤所有的请求 -->
+	<!-- Struts2过滤器过滤所有的请求 -->
 	<filter-mapping>
 		<filter-name>struts</filter-name>
 		<url-pattern>/*</url-pattern>

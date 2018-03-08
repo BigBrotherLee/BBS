@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
 import indi.bigbrotherlee.bbs.entity.User;
-
+/**
+ * UserDao接口的实现类
+ */
 public class UserDaoImpl implements UserDao {
 	private HibernateTemplate hTemplate;
 	public void sethTemplate(HibernateTemplate hTemplate) {

@@ -36,7 +36,7 @@ class TestCase {
 		SendMail send=new SendMail("lee_dage@163.com","1997126iloveyou");
 		try {
 			send.addFile("E:/yzm.jpg");
-			send.sendMail("1832044578@qq.com", "测试", "it is working");
+			send.sendMail("172@qq.com", "测试", "it is working");
 		} catch (AddressException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

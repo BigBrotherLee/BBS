@@ -5,21 +5,22 @@ xmlns:p="http://www.springframework.org/schema/p"
 xsi:schemaLocation="http://www.springframework.org/schema/beans 
 http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- action -->
+	<!-- 注册loginAction，登录功能，依赖userService -->
 	<bean id="loginAction" class="indi.bigbrotherlee.bbs.web.LoginAction" scope="prototype">
 		<property name="userService" ref="userService"></property>
 	</bean>
 	
-	<!-- service -->
+	<!-- 注册userService，处理User表业务，依赖userDao（接口） -->
 	<bean id="userService" class="indi.bigbrotherlee.bbs.service.UserService">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 	
-	<!-- DAO -->
+	<!-- 注册UserDAO，具体类为UserDaoImpl，处理User表的增删改查，依赖于Spring的提供的hibernate模板类 -->
 	<bean id="userDao" class="indi.bigbrotherlee.bbs.dao.UserDaoImpl">
 		<property name="hTemplate" ref="hTemplate"></property>
 	</bean>
 	
-	<!-- 连接池 -->
+	<!-- 配置c3p0连接池 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
 		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/bbs?useSSL=true"></property>
@@ -27,14 +28,13 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 		<property name="password"  value="1997126"></property>
 	</bean>
 	
-	<!-- hibernate -->
+	<!-- hibernate部分；Spring提供的会话工厂和hibernate模板 -->
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocations" value="/WEB-INF/hibernate.cfg.xml"></property>
 	</bean>
 	<bean id="hTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
 		<property name="sessionFactory" ref="sessionFactory"></property>
-		
 	</bean>
 </beans>
 
