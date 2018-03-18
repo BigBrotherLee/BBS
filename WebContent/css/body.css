@@ -1,0 +1,213 @@
+@charset "utf-8";
+#body{
+	margin:53px auto 0px auto;
+	height: 1000px;
+	width: 960px;
+	background-color: rgb(250,243,255);
+	font-family: "微软雅黑";
+}
+#body #body_left{
+	width: 670px;
+	height: auto;
+	float: left;
+	margin-top: 10px;
+	margin-left: 12px;
+}
+#body #body_left .card{
+	overflow: hidden;
+	float: left;
+	width: 670px;
+	background-color: white;
+	box-shadow: 0px 1px 1px 1px rgb(200,194,180);
+	margin-bottom: 10px;
+	color: black;
+	max-height: 250px;
+}
+/*以下为标题部分的样式*/
+#body_left .card .card_head{
+	width: 100%;
+	height: 40px;
+	height: 40px;
+	line-height: 40px;
+}
+.card .card_head .card_head_type{
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 10px;
+	color: rgb(97,69,112);
+	float: left;
+}
+.card .card_head .card_head_point{
+	width: 10px;
+	height: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 15px;
+	background-color: cadetblue;
+	border-radius: 50%;
+	float: left;
+}
+.card .card_head .card_head_title{
+	font-size: 18px;
+	font-weight: bold;
+	float: left
+}
+.card .card_head .card_head_auther{
+	float: right;
+	margin-right: 2px;
+	font-size: 15px;
+	color: blue;
+}
+/*正文与标题的分割线*/
+#body_left .card .card_line{
+	margin: auto;
+	width: 660px;
+	height: 2px;
+	background-color: rgb(209,169,144);
+}
+/*以下为正文样式*/
+#body_left .card .card_body{
+	font-size: 16px;
+	float: left;
+	color: gray;
+	/*border: solid 1px black;*/
+}
+.card .card_body .card_body_auther{
+	font-weight: bold;
+}
+.card_body .card_body_auther span{
+	color: blue;
+}
+.card .card_body .card_body_img{
+	float: left;
+	margin: 2px;
+}
+.card_body .card_body_img img{
+	box-shadow: 0px 1px 1px 1px gray;
+}
+.card .card_body .card_body_text{
+	overflow: hidden;
+	text-indent: 2em;
+}
+.card .card_foot{
+	color: gray;
+	width: 100%;
+	height: 36px;
+	float: left;
+	border-top: dashed 1px gray;
+	margin-top: 5px;
+	text-align: center;
+} 
+.card .card_foot img{
+	border-radius: 50%;
+}
+.card .card_foot .card_foot_add{
+	margin-top: 5px;
+	float: left;
+	width: 60px;
+	height: 30px;
+}
+.card .card_foot .card_foot_add *{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 2px;
+}
+.card .card_foot .card_foot_agree{
+	margin-top: 5px;
+	float: left;
+	width: 60px;
+	height: 30px;
+}
+.card .card_foot .card_foot_agree *{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 2px;
+}
+.card .card_foot .card_foot_disagree{
+	float: left;
+	width: 60px;
+	height: 30px;
+	margin-top: 5px;
+}
+.card .card_foot .card_foot_disagree *{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 2px;
+}
+.card .card_foot .card_foot_question{
+	float: left;
+	width: 60px;
+	height: 30px;
+	margin-top: 5px;
+}
+.card .card_foot .card_foot_question *{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 2px;
+}
+.card .card_foot .card_foot_love{
+	float: right;
+	width: 60px;
+	height: 30px;
+	margin-top: 5px;
+}
+.card .card_foot .card_foot_love *{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 2px;
+}
+.card_foot .card_foot_love img{
+	border-radius: 0;
+}
+.card .card_foot .card_foot_get{
+	float: right;
+	width: 60px;
+	height: 30px;
+	margin-top: 5px;
+}
+.card .card_foot .card_foot_get *{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 2px;
+}
+.card_foot .card_foot_get img{
+	border-radius: 0;
+}
+/*以下为“关于我” 的样式*/
+#body #body_right{
+	float: left;
+	height: 440px;
+	width: 263px;
+	margin-top: 140px;
+	margin-left:9px ;
+	background-color: white;
+	box-shadow: 0px 1px 1px 1px rgb(200,194,180);
+}
+#body #body_right .about_me_type{
+	width: 263px;
+	height: 47px;
+	font-size: 20px;
+	line-height: 47px;
+	font-weight: bold;
+	color: rgb(117,117,157);
+	margin: auto;
+	text-align: center;
+}
+#body_right .about_me_type .about_me_type_item{
+	width: 33.3%;
+	float: left;
+}
+#body_right .about_me_type #type_blog{
+	background-color: rgb(213,197,161);
+}
+#body #body_right #about_me_body{
+	background-color: white;
+}
+#body_right #about_me_body .about_me_body_item{
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	margin-top: 2px;
+	background-color: rgb(213,197,161);
+}

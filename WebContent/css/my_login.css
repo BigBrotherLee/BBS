@@ -1,0 +1,82 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding: 0;
+}
+#login{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	background-color: rgba(000,000,000,0.3);
+}
+#login #login_bg{
+	padding-top: 5px;
+	width: 300px;
+	height: 400px;
+	background-color: rgb(252,247,247);
+	margin: 100px auto;
+	text-align: center;
+}
+#login #login_bg #login_head{
+	width: 200px;
+	height: 60px;
+	background-image:url(../img/logo_op.png);
+	background-size: auto 100%;	
+	margin: 20px auto;	
+}
+#login_bg #login_head #login_head_option{
+	margin-top: 40px;
+	float: right;
+	font-family: "黑体";
+	color: rgb(106,57,6);
+	font-size: 24px;
+}
+#login #login_bg #login_name,#login_password{
+	margin-top: 10px;
+	width: 232px;
+	height: 46px;
+	background-color: rgb(250,240,224);
+	border: none;
+	box-shadow: 1px 1px 1px 1px rgb(235,231,231);
+}
+#login #login_bg #login_yzm{
+	margin-top: 10px;
+	width: 232px;
+	height: 46px;
+	margin: 10px auto;
+}
+#login_bg #login_yzm #login_yzm_input{
+	float: left;
+	width: 120px;
+	height: 46px;
+	background-color: rgb(255,247,235);
+	border: none;
+	box-shadow: 0px 1px 1px 1px rgb(235,231,231);
+	color: gray;
+}
+#login_bg #login_yzm img{
+	float: right;
+}
+#login #login_bg #login_button{
+	width: 200px;
+	height: 40px;
+	background-color: rgb(194,193,193);
+	border: none;
+	font-family: "微软雅黑";
+	font-size: 24px;
+	font-weight: bold;
+	color: rgb(12,31,35);
+	margin-top: 10px;
+}
+#login #login_bg #login_register,#login_other{
+	font-family: "黑体";
+	font-size: 18px;
+	margin-top: 5px;
+	color: rgb(193,193,193);
+}
+#login #login_bg #login_other{
+	font-size: 14px;
+	float: right;
+	margin:15px;
+}

@@ -1,0 +1,10 @@
+@charset "utf-8";
+#copyright{
+	width: 100%;
+	background-color: rgb(213,197,161);
+	height: 50px;
+	text-align: center;
+	font-family: arial;
+	line-height: 50px;
+	font-size: 20px;
+}
