@@ -1,9 +1,16 @@
 @charset "utf-8";
+body{
+	background-color: #f6f6f6;
+}
+.glyphicon{
+	font-size: 18px;
+	
+}
 #body{
 	margin:53px auto 0px auto;
-	height: 1000px;
+	min-height: 760px;
 	width: 960px;
-	background-color: rgb(250,243,255);
+	background-color: rgb(240,240,250);
 	font-family: "微软雅黑";
 }
 #body #body_left{
@@ -14,6 +21,7 @@
 	margin-left: 12px;
 }
 #body #body_left .card{
+	border-radius: 3px;
 	overflow: hidden;
 	float: left;
 	width: 670px;
@@ -50,7 +58,7 @@
 .card .card_head .card_head_title{
 	font-size: 18px;
 	font-weight: bold;
-	float: left
+	float: left;
 }
 .card .card_head .card_head_auther{
 	float: right;
@@ -70,7 +78,6 @@
 	font-size: 16px;
 	float: left;
 	color: gray;
-	/*border: solid 1px black;*/
 }
 .card .card_body .card_body_auther{
 	font-weight: bold;
@@ -97,81 +104,24 @@
 	border-top: dashed 1px gray;
 	margin-top: 5px;
 	text-align: center;
-} 
-.card .card_foot img{
-	border-radius: 50%;
 }
-.card .card_foot .card_foot_add{
-	margin-top: 5px;
-	float: left;
-	width: 60px;
-	height: 30px;
-}
-.card .card_foot .card_foot_add *{
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0 2px;
-}
-.card .card_foot .card_foot_agree{
-	margin-top: 5px;
-	float: left;
-	width: 60px;
-	height: 30px;
-}
-.card .card_foot .card_foot_agree *{
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0 2px;
-}
-.card .card_foot .card_foot_disagree{
-	float: left;
-	width: 60px;
-	height: 30px;
+.card .card_foot *{
 	margin-top: 5px;
 }
-.card .card_foot .card_foot_disagree *{
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0 2px;
-}
-.card .card_foot .card_foot_question{
+
+.card .card_foot .card_foot_position{
 	float: left;
 	width: 60px;
-	height: 30px;
-	margin-top: 5px;
+	height: 20px;
 }
-.card .card_foot .card_foot_question *{
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0 2px;
-}
-.card .card_foot .card_foot_love{
+
+.card .card_foot .card_foot_attention{
 	float: right;
 	width: 60px;
-	height: 30px;
-	margin-top: 5px;
+	height: 20px;
 }
-.card .card_foot .card_foot_love *{
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0 2px;
-}
-.card_foot .card_foot_love img{
-	border-radius: 0;
-}
-.card .card_foot .card_foot_get{
-	float: right;
-	width: 60px;
-	height: 30px;
-	margin-top: 5px;
-}
-.card .card_foot .card_foot_get *{
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0 2px;
-}
-.card_foot .card_foot_get img{
-	border-radius: 0;
+.glyphicon:hover{
+	color:blue;
 }
 /*以下为“关于我” 的样式*/
 #body #body_right{
@@ -199,6 +149,9 @@
 }
 #body_right .about_me_type #type_blog{
 	background-color: rgb(213,197,161);
+}
+#body_right .about_me_type #type_blog:hover,#type_question:hover,#type_answer:hover{
+	border-top: solid 2px  rgb(213,197,161);
 }
 #body #body_right #about_me_body{
 	background-color: white;

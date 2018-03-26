@@ -9,6 +9,7 @@
 	position: fixed;
 	top: 0px;
 	background-color: rgba(000,000,000,0.3);
+	z-index: 1;/*z轴位置*/
 }
 #login #login_bg{
 	padding-top: 5px;
@@ -18,12 +19,27 @@
 	margin: 100px auto;
 	text-align: center;
 }
+#login #login_bg #login_close{
+	width: 30px;
+	height: 30px;
+	border: none;
+	background-color: rgb(252,247,247);
+	font-size: 25px;
+	color: grey;
+	border-radius: 50%;
+}
+#login #login_bg #login_close:hover{
+	background-color:gray;
+	color: white;
+	cursor:pointer;
+}
+
 #login #login_bg #login_head{
 	width: 200px;
 	height: 60px;
 	background-image:url(../img/logo_op.png);
 	background-size: auto 100%;	
-	margin: 20px auto;	
+	margin: 10px auto;	
 }
 #login_bg #login_head #login_head_option{
 	margin-top: 40px;
@@ -69,14 +85,20 @@
 	color: rgb(12,31,35);
 	margin-top: 10px;
 }
+#login #login_bg #login_button:hover{
+	background-color: gray;color: black;
+}
 #login #login_bg #login_register,#login_other{
 	font-family: "黑体";
 	font-size: 18px;
-	margin-top: 5px;
 	color: rgb(193,193,193);
+}
+#login #login_bg #login_register:hover,#login_other:hover{
+	color: rgb(12,31,35);
+	cursor:pointer;
 }
 #login #login_bg #login_other{
 	font-size: 14px;
 	float: right;
-	margin:15px;
+	margin-right: 5px;
 }

@@ -11,12 +11,12 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 	</bean>
 	
 	<!-- 注册userService，处理User表业务，依赖userDao（接口） -->
-	<bean id="userService" class="indi.bigbrotherlee.bbs.service.UserService">
+	<bean id="userService" class="indi.bigbrotherlee.bbs.service..impl.UserServiceImpl">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 	
 	<!-- 注册UserDAO，具体类为UserDaoImpl，处理User表的增删改查，依赖于Spring的提供的hibernate模板类 -->
-	<bean id="userDao" class="indi.bigbrotherlee.bbs.dao.UserDaoImpl">
+	<bean id="userDao" class="indi.bigbrotherlee.bbs.dao.impl.UserDaoImpl">
 		<property name="hTemplate" ref="hTemplate"></property>
 	</bean>
 	
@@ -25,7 +25,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
 		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/bbs?useSSL=true"></property>
 		<property name="user"  value="root"></property>
-		<property name="password"  value="1997126"></property>
+		<property name="password"  value="root'"></property>
 	</bean>
 	
 	<!-- hibernate部分；Spring提供的会话工厂和hibernate模板 -->

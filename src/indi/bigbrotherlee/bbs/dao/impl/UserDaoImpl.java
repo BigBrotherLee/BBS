@@ -1,9 +1,10 @@
-package indi.bigbrotherlee.bbs.dao;
+package indi.bigbrotherlee.bbs.dao.impl;
 
 import java.util.List;
 
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
+import indi.bigbrotherlee.bbs.dao.UserDao;
 import indi.bigbrotherlee.bbs.entity.User;
 /**
  * UserDao接口的实现类

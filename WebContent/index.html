@@ -2,22 +2,27 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
-		<script type="text/javascript" src="js/change.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>首页</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/head.css"/>
 		<link rel="stylesheet" type="text/css" href="css/body.css" />
 		<link rel="stylesheet" type="text/css" href="css/copyright.css" />
-		<link rel="stylesheet" type="text/css" href="css/my_login.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<script type="text/javascript" src="js/jquery/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/change.js"></script>
+		<script type="text/javascript" src="js/login.js" charset="utf-8"></script>
 	</head>
 	<body>
 		<div id="head" >
 			<div id="head_bar">
 				<div id="head_bar_left">
-					<img src="img/logo.png" height="53px" alt="logo"/>
+					<a href="index.html"><img src="img/logo.png" height="53px" alt="logo"/></a>
 					<span id="website_name">观点</span>
 					<div id="head_bar_left_search">
 						<input type="text" placeholder="关键字" id="head_bar_left_searchT"/>
-						<input type="button" value="" id="head_bar_left_searchB"/>
+						<button type="button" class="btn btn-danger glyphicon glyphicon-search" id="head_bar_left_searchB">	</button>
 					</div>
 				</div>
 				<div id="head_bar_right">
@@ -30,6 +35,7 @@
 		
 		<div id="login">
 			<div id="login_bg">
+				<input type="button" id="login_close"  title="暂不登录" value="x" onclick="loginClose()"/>
 				<div id="login_head">
 					<div id="login_head_option">
 						我们的思想
@@ -38,14 +44,14 @@
 				<input type="email" id="login_name" placeholder="Email"/>
 				<input type="password"  id="login_password" placeholder="Password"/>
 				<div id="login_yzm">
-					<input type="text"  id="login_yzm_input" value="验证码" /><img src="img/logo.png" width="100px" height="46px"/>
+					<input type="text"  id="login_yzm_input" placeholder="验证码" /><img src="img/logo.png" width="100px" height="46px"/>
 				</div>
 				<input type="button" value="登录" id="login_button"/>
 				<div id="login_register">
 					注册
 				</div>
 				<div id="login_other">
-					其他方式登录
+					其他方式登录				
 				</div>
 			</div>
 		</div>
@@ -71,23 +77,23 @@
 						</div>
 					</div>
 					<div class="card_foot">
-						<div class="card_foot_add">
-							<img src="img/add.png" width="26px"/><span>10</span>
+						<div class="card_foot_position card_foot_add" title="补充">
+							<span class="glyphicon glyphicon-plus-sign">10</span>
 						</div>
-						<div class="card_foot_agree" >
-							<img src="img/agree.png" width="26px"/><span>0</span>
+						<div class="card_foot_position card_foot_agree" title="赞同">
+							<span class="glyphicon glyphicon-ok-sign">0</span>
 						</div>
-						<div class="card_foot_disagree" >
-							<img src="img/disagree.png" width="26px"/><span>0</span>
+						<div class="card_foot_position  card_foot_disagree" title="反对">
+							<span class="glyphicon glyphicon-remove-sign">0</span>
 						</div>
-						<div class="card_foot_question">
-							<img src="img/yiwen.png" width="26px"/><span>0</span>
+						<div class="card_foot_position  card_foot_question" title="疑问">
+							<span class="glyphicon glyphicon-question-sign">0</span>
 						</div>
-						<div class="card_foot_get">
-							<img src="img/shouchang.png" height="26px"/><span>0</span>
+						<div class="card_foot_attention card_foot_get" title="收藏">
+							<span class="glyphicon glyphicon-book">0</span>
 						</div>
-						<div class="card_foot_love">
-							<img src="img/love.png" width="26px"/><span>0</span>
+						<div class="card_foot_attention card_foot_love" title="赞">
+							<span class="glyphicon glyphicon-heart">0</span>
 						</div>
 					</div>
 				</div>
@@ -114,23 +120,23 @@
 						</div>
 					</div>
 					<div class="card_foot">
-						<div class="card_foot_add">
-							<img src="img/add.png" width="26px"/><span>10</span>
+						<div class="card_foot_position card_foot_add" title="补充">
+							<span class="glyphicon glyphicon-plus-sign">10</span>
 						</div>
-						<div class="card_foot_agree" >
-							<img src="img/agree.png" width="26px"/><span>0</span>
+						<div class="card_foot_position card_foot_agree" title="赞同">
+							<span class="glyphicon glyphicon-ok-sign">0</span>
 						</div>
-						<div class="card_foot_disagree" >
-							<img src="img/disagree.png" width="26px"/><span>0</span>
+						<div class="card_foot_position  card_foot_disagree" title="反对">
+							<span class="glyphicon glyphicon-remove-sign">0</span>
 						</div>
-						<div class="card_foot_question">
-							<img src="img/yiwen.png" width="26px"/><span>0</span>
+						<div class="card_foot_position  card_foot_question" title="疑问">
+							<span class="glyphicon glyphicon-question-sign">0</span>
 						</div>
-						<div class="card_foot_get">
-							<img src="img/shouchang.png" height="26px"/><span>0</span>
+						<div class="card_foot_attention card_foot_get" title="收藏">
+							<span class="glyphicon glyphicon-book">0</span>
 						</div>
-						<div class="card_foot_love">
-							<img src="img/love.png" width="26px"/><span>0</span>
+						<div class="card_foot_attention card_foot_love" title="赞">
+							<span class="glyphicon glyphicon-heart">0</span>
 						</div>
 					</div>
 				</div>
@@ -160,6 +166,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<div id="copyright">
 			&copy;Copyright made by L,W,N
 		</div>
