@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+		<!-- action -->
+	<!-- 注册UserDAO，具体类为UserDaoImpl，处理User表的增删改查，依赖于Spring的提供的hibernate模板类 -->
+	<bean id="userDao" class="indi.bigbrotherlee.bbs.dao.impl.UserDaoImpl">
+		<property name="hTemplate" ref="hTemplate"></property>
+	</bean>
+	
+	<!-- 注册userService，处理User表业务，依赖userDao（接口） -->
+	<bean id="userService" class="indi.bigbrotherlee.bbs.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	
+	<!-- 注册loginAction，登录功能，依赖userService -->
+	<bean id="UserAction" class="indi.bigbrotherlee.bbs.web.UserAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+</beans>
