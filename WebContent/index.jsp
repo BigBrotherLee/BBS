@@ -43,17 +43,19 @@
 						我们的思想
 					</div>
 				</div>
-				<input type="email" id="login_name"  name="user.name"  placeholder="Email"/>
-				<input type="password"  id="login_password"  name="user.password" placeholder="Password"/>
-				<div id="login_yzm">
-					<input type="text"  id="login_yzm_input" placeholder="验证码" /><img src="#"  width="100px" height="46px"/>
-				</div>
-				<input type="button" value="登录" id="login_button"/>
+					<form action="loginUserAction" method="post">
+					<input type="email" id="login_name"  name="user.name"  placeholder="Email"/>
+					<input type="password"  id="login_password"  name="user.password" placeholder="Password"/>
+					<div id="login_yzm">
+						<input type="text"  id="login_yzm_input" placeholder="验证码" /><img src="#"  width="100px" height="46px"/>
+					</div>
+					<input type="submit" value="登录" id="login_button"/>
+				</form>
 				<div id="login_register">
 					注册
 				</div>
 				<div id="login_other">
-					其他方式登录				
+					其他方式登录		
 				</div>
 			</div>
 		</div>

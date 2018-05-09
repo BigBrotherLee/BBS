@@ -11,6 +11,7 @@ import indi.bigbrotherlee.bbs.entity.User;
  */
 public class UserDaoImpl implements UserDao {
 	private HibernateTemplate hTemplate;
+	
 	public void sethTemplate(HibernateTemplate hTemplate) {
 		this.hTemplate = hTemplate;
 	}

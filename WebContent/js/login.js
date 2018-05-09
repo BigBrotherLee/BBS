@@ -4,3 +4,6 @@ function loginClose(){
 	});
 	
 }
+function login(){
+	
+}

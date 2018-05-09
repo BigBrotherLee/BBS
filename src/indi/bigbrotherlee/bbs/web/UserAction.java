@@ -12,12 +12,12 @@ import com.opensymphony.xwork2.ModelDriven;
 import indi.bigbrotherlee.bbs.entity.User;
 import indi.bigbrotherlee.bbs.service.UserService;
 
-public class LoginAction extends ActionSupport implements ModelDriven<User>{
+public class UserAction extends ActionSupport implements ModelDriven<User>{
 	private User user =new User();
 	private UserService userService;
 	
 	public String login(){//这个方法注册为一个action，处理来自用户的登录请求
-		return userService.login(user);
+		return "404";
 	}
 	public void setUserService(UserService userService) {
 		this.userService = userService;
