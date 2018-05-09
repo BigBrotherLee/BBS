@@ -43,7 +43,7 @@ public class Question {
 	
 	@OneToMany
 	@JoinColumn(name="classify_id")
-	private Classify classify_id;
+	private List<Classify> classify_id;
 
 	public Integer getId() {
 		return id;
@@ -117,11 +117,13 @@ public class Question {
 		this.tag_id = tag_id;
 	}
 
-	public Classify getClassify_id() {
+	public List<Classify> getClassify_id() {
 		return classify_id;
 	}
 
-	public void setClassify_id(Classify classify_id) {
+	public void setClassify_id(List<Classify> classify_id) {
 		this.classify_id = classify_id;
 	}
+
+	
 }

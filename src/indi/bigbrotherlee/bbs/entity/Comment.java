@@ -1,6 +1,7 @@
 package indi.bigbrotherlee.bbs.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,16 +17,47 @@ import org.hibernate.annotations.Type;
 @Entity
 @Table(name="comment")
 public class Comment {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="id")
+	private Integer id;
+	
+	@ManyToMany
+	@JoinColumn(name="auther_id")
+	private List<User> auther_id;
+	
+	@Column(name="create_date")
+	private Date create_date;
+	
+	@Column(name="isAnonymous")
+	private boolean isAnonymous;
+	
+	@Column(name="comment")
+	@Type(type="text")
+	private String comment;
+	
+	@ManyToOne
+	@JoinColumn(name="question_id")
+	private Question question_id;
+	
+	@ManyToOne
+	@JoinColumn(name="essay_id")
+	private Essay essay_id;
+	
+	@ManyToOne
+	@JoinColumn(name="comment_id")
+	private Comment comment_id;
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public User getAuther_id() {
+	
+	public List<User> getAuther_id() {
 		return auther_id;
 	}
-	public void setAuther_id(User auther_id) {
+	public void setAuther_id(List<User> auther_id) {
 		this.auther_id = auther_id;
 	}
 	public Date getCreate_date() {
@@ -64,34 +96,4 @@ public class Comment {
 	public void setComment_id(Comment comment_id) {
 		this.comment_id = comment_id;
 	}
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="id")
-	private Integer id;
-	
-	@ManyToMany
-	@JoinColumn(name="auther_id")
-	private User auther_id;
-	
-	@Column(name="create_date")
-	private Date create_date;
-	
-	@Column(name="isAnonymous")
-	private boolean isAnonymous;
-	
-	@Column(name="comment")
-	@Type(type="text")
-	private String comment;
-	
-	@ManyToOne
-	@JoinColumn(name="question_id")
-	private Question question_id;
-	
-	@ManyToOne
-	@JoinColumn(name="essay_id")
-	private Essay essay_id;
-	
-	@ManyToOne
-	@JoinColumn(name="comment_id")
-	private Comment comment_id;
 }
